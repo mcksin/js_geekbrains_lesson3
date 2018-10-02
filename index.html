@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript lesson 2</title>
+
+</head>
+<body>
+
+
+    <script>
+        // 1 --------------------- begin
+      /**
+       постфикс и префикс
+
+       a++ возвращает исходное значение, а затем увеличивается на 1;
+       ++a возвращает увеличенное значение на 1;
+
+       var a = 1, b = 1, c, d;
+        c = ++a; alert(c);   // 2    --  используется префикс, тоже самое что :  c = c+1; a = a+1;
+        d = b++; alert(d); // 1      --  используется постфикс, тоже  самое что : d =b; b=b+1;
+        c = (2+ ++a); alert(c); // 5 --  используется префикс, тоже самое что :  c = 2+(a+1); a = a+1;
+        d = (2+ b++); alert(d); // 4 --  используется постфикс, тоже  самое что : d =2+b; b=b+1;
+        alert(a); alert(b); // 3     --  независимо используется ли префикс или постфикс значение увеличивается на 1, разница в присвоении значения
+
+            **/
+      // 1 --------------------- end
+
+        // 2 --------------------- begin
+        var d = 2;
+
+        var x = 1 + d * 2;
+        console.log("-------"+x);
+         // 2 --------------------- end
+
+
+        // 3 --------------------- begin
+        var a = -25;
+        var b = 5;
+        if((a>=0 && b<=0) || (a<=0 && b>=0 ) ){
+            a = a+b;
+        }
+        if(a >= 0  && b >= 0){
+            a = a-b;
+         }
+
+
+        if(a <= 0  && b <= 0){
+            a = a*b;
+         }
+        console.log(a);
+         // 3 --------------------- end
+
+
+        // 4 --------------------- begin
+        function usRandom(min,max){
+            min =parseInt(min);
+            max =parseInt(max);
+            if(isNaN(min)||isNaN(max)){
+                return false;
+            }
+           return parseInt(Math.random()*(max-min)+min);
+        }
+        var s = usRandom(0,15);
+
+        switch (s){
+            case 0:{
+                console.log("switch : 0");
+
+            }
+            case 1:{
+                console.log("switch : 1");
+
+            }
+            case 2:{
+                console.log("switch : 2");
+
+            }
+            case 3:{
+                console.log("switch : 3");
+
+            }
+            case 4:{
+                console.log("switch : 4");
+
+            }
+            case 5:{
+                console.log("switch : 5");
+
+            }
+            case 6:{
+                console.log("switch : 6");
+
+            }
+            case 7:{
+                console.log("switch : 7");
+
+            }
+            case 8:{
+                console.log("switch : 8");
+
+            }
+            case 9:{
+                console.log("switch : 9");
+
+            }
+            case 10:{
+                console.log("switch : 10");
+
+            }
+            case 11:{
+                console.log("switch : 11");
+
+            }
+            case 12:{
+                console.log("switch : 12");
+
+            }
+            case 13:{
+                console.log("switch : 13");
+
+            }
+            case 14:{
+                console.log("switch : 14");
+
+            }
+            case 15:{
+                console.log("switch : 14");
+
+            }
+
+        }
+      // 4 --------------------- end
+
+      // 5 --------------------- begin
+        var qw = "5";
+        var sw = 5;
+
+        function sum(a,b){
+            return a+b;
+        }
+        function sub(a,b){
+            return a-b;
+        }
+        function mul(a,b){
+            return a*b;
+        }
+        function divis(a,b){
+            return a/b;
+        }
+
+
+
+        console.log("функция sum : "+ sum(sw,qw));
+        console.log("функция sub : "+ sub(sw,qw));
+        console.log("функция mul : "+ mul(sw,qw));
+        console.log("функция divis : "+ divis(sw,qw));
+     // 5 --------------------- end
+
+
+      // 6 --------------------- begin
+      function mathOperation(arg1,arg2,operation) {
+          arg1 =parseInt(arg1);
+          arg2 =parseInt(arg2);
+          if(isNaN(arg1)||isNaN(arg2)){
+            return false;
+          }
+         switch (operation){
+              case "+":{
+                  return sum(arg1,arg2);
+              }
+              case "-":{
+                  return sub(arg1,arg2);
+              }
+              case "*":{
+                  return  mul(arg1,arg2);
+              }
+              case "/":{
+                  console.log("-----");
+                  return  divis(arg1,arg2);
+              }
+              default:{
+                  return false;
+              }
+          }
+      }
+      console.log(mathOperation(45,"43","-"));
+     // 6 --------------------- end
+
+     // 7 --------------------- begin
+        var nl = null>0; //false
+       // nl = nl<0; //false
+       // nl = nl>0; //false
+       // nl = nl==0; //false
+       // nl = nl<=0; //true
+       // nl = nl>=0; //true
+        // спецификация Js - Если null < 0 принимает значение false, то null >= 0 принимает значение true
+        // сделано для оптимизации вычисления
+        console.log("************* "+nl);
+     // 7 --------------------- end
+
+
+      // 8 --------------------- end
+        function step(ar1,ar2) {
+            if(ar2 !=1){
+                return ar1 * step(ar1,ar2-1);
+            }
+            else{
+                return ar1;
+            }
+        }
+        console.log("---"+ step(2,20) );
+      // 8 --------------------- end
+    </script>
+</body>
+</html>
