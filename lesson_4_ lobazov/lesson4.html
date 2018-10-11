@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/text.js" defer></script>
+    <script src="js/gameCode.js" defer></script>
+    <script src="js/init.js" ></script>
+    <script src="js/lib.js"></script>
+
+    <style>
+        div{
+            margin: 50px;
+        }
+        a{
+            border-radius: 5px;
+            padding: 10px 20px;
+            background: #cb213f;
+            color:#fff;
+            text-decoration: none;
+        }
+    </style>
+    <script>
+        /*    var attempts = 0; //  число попыток
+          generateNumber();// функция генерации числа
+          alert(number.toString());
+          guessNumber();
+        console.log(arrToString(number));
+
+
+          function arrToString(num) {
+              if(!Array.isArray(num)){
+                  return false;
+              }
+              var str = '';
+              num.forEach(function (t) {
+                  str += t.toString();
+              });
+              return str;
+          }*/
+  /*      function generateNumber(){
+            number = [];// массив уникальных чисел
+            var min = 0;
+            var max =9;
+            // заполеяем массив  цифр
+            for(var i= 0;i<4;i++){
+                //
+                var part =Math.round(Math.random()*(max-min)+min);
+                // первое число всегда уникально
+                if(i==0){
+                    number[0] = part;
+                }else {
+
+                    while(number.indexOf(part)!= -1){
+                        //пока не сгенерируется уникальное число , генерация продолжается
+                        part = Math.round(min+Math.random()*(max-min));
+                    }
+                    number[i] = part;
+                }
+            }
+        }
+        function guessNumber() {
+            var result =prompt("Введите число (-1 : закончить игру)", 0);
+            var  gameIsRunning = true;
+            while(gameIsRunning){
+                if(parseInt(result) == -1){
+                    gameIsRunning = false;
+                }
+                else if(parseInt(result) == 0 || isNaN(parseInt(result))){
+                    alert("неправильное значение");
+                  result =  prompt("Введите число (-1 : закончить игру)",0);
+                }
+                else{
+                    var answer = checkNumber(result);
+                    if(answer[0]){
+                        alert("Правильно. Колличество попыток "+ attempts);
+                        gameIsRunning =false;
+                    }
+                    else{
+                        result = prompt("Быки :"+ answer[1]+"Коровы:" + answer[2]+"Введите число (-1 : закончить игру)",0);
+                    }
+                }
+            }
+        }
+        function checkNumber(myResult){
+            attempts++;
+            // массив результата
+            // 0 -  общий результат
+            // 1 - быки
+            // 2 - коровы
+            var answer =[false,0,0];
+            console.log(myResult);
+            console.log(number);
+            var ranks = myResult.split(""); // массив из числа
+            for(var i =0;i<ranks.length;i++){
+                if(parseInt(ranks[i])==number[i]){
+                    answer[1]++;
+                }
+                else if(number.indexOf(parseInt(ranks[i]))!=-1){
+                    answer[2]++;
+                }
+            }
+            if(answer[1]==4){
+                answer[0]= true;
+            }
+            return answer;
+        }
+*/
+
+
+
+            /*var result = prompt(mas[iter].text+"\n"+mas[iter].v1+"\n"+mas[iter].v2+"\n"+mas[iter].v3+"\n"+mas[iter].v4+"\n");
+             result = milValid(result);
+            if(result && mas[0].ok == result ){
+                while(iter < mas.length){
+                    if(mas[iter].ok == result){
+                        console.log(iter);
+                        iter++;
+                        result = prompt(mas[iter].text+"\n"+mas[iter].v1+"\n"+mas[iter].v2+"\n"+mas[iter].v3+"\n"+mas[iter].v4+"\n");
+                        result = milValid(result);
+                    }
+                    else{
+                        alert(" Hеверный ответ. Игра окончена\n Правильных ответов:"+iter);
+                        break;
+                    }
+                }
+
+            }else{
+                alert(" Hеверный ответ. Игра окончена"+iter);
+            }*/
+
+         /*   var startGame = true;
+            while(startGame){
+                if(parseInt(result)== 0){
+                    startGame =false;
+                }
+
+
+
+
+            }*/
+
+    </script>
+</head>
+<body>
+<div>
+    <a href="#" onclick="lessOne();">Упраждение 1</a>
+    <a href="#" onclick="questGame();">Упраждение 2</a>
+    <a href="#" onclick="million();">Упраждение 3</a>
+
+</div>
+</body>
+</html>
