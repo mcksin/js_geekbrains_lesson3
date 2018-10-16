@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lesson6</title>
+    <script src="js/script.js" defer>
+        
+    </script>
+    <style>
+        .up1 div{
+
+            display: flex;
+            justify-content: center;
+            background: red;
+        }
+        #big,#slide-image{
+            width: 500px;
+            height: 250px;
+            display: block;
+            margin:100px auto 10px;
+        }
+        .smile{
+            background: red;
+            cursor:  pointer;
+            width: 100px;
+            height: 50px;
+        }
+        .slider div {
+            margin: 0 auto;
+            cursor: pointer;
+            background: green;
+            height: 50px;
+            width: 100px;
+            border:1px solid black;
+        }
+
+    </style>
+</head>
+<body>
+<div class="up1">
+    <h2>1  упражнение</h2>
+    <img id="big" src="big/logo2.png" alt="">
+    <div>
+        <img src="smail/logo.png" alt="#" class="smile">
+        <img src="smail/logo2.png" alt="#" class="smile">
+        <img src="smail/logo11.jpg" alt="#" class="smile">
+
+    </div>
+
+</div>
+<div>
+    <h2> 2 упражнение </h2>
+
+    <div id="basket">
+
+    </div>
+    <ul id="product-list">
+        <li class="product">
+            <img src="#" alt="">
+            <h3 class="pr-tiile">nokia</h3>
+            <p>Цена : <span class="pr-price">3000</span></p>
+            <button class="pr-btn" datafull='{"id": 1,"title":"lenovo","price":3000}' onclick="addBasket(this);">Купить</button>
+        </li>
+        <li class="product">
+            <img src="#" alt="">
+            <h3 class="pr-tiile">lenovo</h3>
+            <p>Цена : <span class="pr-price">4000</span></p>
+            <button class="pr-btn"  datafull='{"id": 2,"title":"nokia","price":4000}' onclick="addBasket(this);">Купить</button>
+        </li>
+        <li class="product">
+            <img src="#" alt="">
+            <h3 class="pr-tiile">sharp</h3>
+            <p>Цена : <span class="pr-price">1250</span></p>
+            <button class="pr-btn"   datafull='{"id": 3,"title":"sharp","price":1250}'  onclick="addBasket(this);">Купить</button>
+        </li>
+        <li class="product">
+            <img src="#" alt="">
+            <h3 class="pr-tiile">samsung</h3>
+            <p>Цена : <span class="pr-price">7500</span></p>
+            <button class="pr-btn" datafull='{"id": 4,"title":"samsung","price":7500}' onclick="addBasket(this);">Купить</button>
+        </li>
+    </ul>
+</div>
+<div class="slider">
+    <h2>3 упражнение </h2>
+
+        <img id="slide-image" src="#" alt="">
+        <div onclick="prev();">prev </div>
+        <div onclick="next();">next</div>
+
+
+</div>
+</body>
+</html>
